@@ -2,6 +2,15 @@ package queue
 
 import "fmt"
 
+type IQueue interface {
+	EnQueue(data *Node) *Queue
+	DeQueue() *Node
+	Peek() *Node
+	IsEmpty() bool
+	Size() int
+	Show()
+}
+
 type Node struct {
 	Data interface{}
 	Next *Node

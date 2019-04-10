@@ -5,6 +5,14 @@ import (
 	"github.com/gohouse/dataStructure/queue"
 )
 
+type IAVLTree interface {
+	Add(data int) *AVLTree
+	Width() int
+	Depth()
+	Size() int
+	Show()
+}
+
 type AvlNode struct {
 	data   int
 	left   *AvlNode
