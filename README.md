@@ -12,13 +12,21 @@ the data structure implementation in golang
 package queue
 
 type IQueue interface {
+	// 入队列
 	EnQueue(data *Node) *Queue
+	// 出队列
 	DeQueue() *Node
+	// 构造入队列数据节点
+	Data(data interface{}) *Node
+	// 获取队列第一个元素,不出队列
 	Peek() *Node
+	// 队列是否为空
 	IsEmpty() bool
+	// 队列数据数量
 	Size() int
+	// 打印队列
 	Show()
-} 
+}
 ```
 
 ## hashTable
@@ -47,10 +55,15 @@ type IHashTable interface {
 package avl
 
 type IAVLTree interface {
+	// 添加节点
 	Add(data int) *AVLTree
+	// 树宽
 	Width() int
+	// 树的最大深度
 	Depth()
+	// 树的节点数
 	Size() int
+	// 横向按层打印树
 	Show()
 }
 ```

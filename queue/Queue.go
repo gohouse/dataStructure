@@ -3,12 +3,19 @@ package queue
 import "fmt"
 
 type IQueue interface {
+	// 入队列
 	EnQueue(data *Node) *Queue
+	// 出队列
 	DeQueue() *Node
+	// 构造入队列数据节点
 	Data(data interface{}) *Node
+	// 获取队列第一个元素,不出队列
 	Peek() *Node
+	// 队列是否为空
 	IsEmpty() bool
+	// 队列数据数量
 	Size() int
+	// 打印队列
 	Show()
 }
 

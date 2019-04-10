@@ -6,10 +6,15 @@ import (
 )
 
 type IAVLTree interface {
+	// 添加节点
 	Add(data int) *AVLTree
+	// 树宽
 	Width() int
+	// 树的最大深度
 	Depth()
+	// 树的节点数
 	Size() int
+	// 横向按层打印树
 	Show()
 }
 
