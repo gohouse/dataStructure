@@ -5,6 +5,7 @@ import "fmt"
 type IQueue interface {
 	EnQueue(data *Node) *Queue
 	DeQueue() *Node
+	Data(data interface{}) *Node
 	Peek() *Node
 	IsEmpty() bool
 	Size() int
