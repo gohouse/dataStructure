@@ -11,7 +11,7 @@ type IAVLTree interface {
 	// 树宽
 	Width() int
 	// 树的最大深度
-	Depth()
+	Depth() int
 	// 树的节点数
 	Size() int
 	// 横向按层打印树
